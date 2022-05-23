@@ -1,0 +1,95 @@
+  <%- include ("includes/header.ejs") %>
+  <style>
+    .rounded-rentangle {
+        border-radius: 25px;
+        background: #fff;
+        padding: 30px;
+        text-align: center;
+        width: 350px;
+        height: 150px;
+        border:#000;
+        border:3px solid #000;
+    }
+    </style>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="py-5 text-center">
+        <img src="">Logo Pomodoro</img>
+      </div>
+    </div>
+    <!--
+    <div class="row">
+      <div class="col-md-6 offset-3">
+        <div class="col-md-6 offset-3" style="text-align:center;">
+          <div class="rounded-rentangle">
+            <h2>14:14 </h2>
+            <p>Task Name</p>
+          </div>
+          <p>Pause | Stop | Restart</p>
+        </div>
+      </div>
+    </div>
+    -->
+    <div class="row">
+      <div class="col-md-6 offset-3">
+        <p>My List (show/hide completed tasks)</p>
+        <p><button type="button" class="btn btn-primary">(+) Add new task with Est; Pomodoro (default: 1)</button></p>
+        <!-- display the list-->  
+        <table class="table" style="background-color:white;">
+          <tbody>
+            <% for (let i=0; i < data.length; i++) {%>
+            <tr>
+              <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></th>
+              <td><%= data[i].name %></td>
+              <td>
+                <% for (let j=0; j < data[i].estimated_pomodoro;j++) { %>
+                  <i class="bi bi-check-circle"></i>
+                <% } %> 
+              </td>
+              <td>Added</td>
+              <td>Last Updated</td>
+              <td>
+                <i class="bi bi-play-circle"></i>&nbsp;&nbsp;
+                <i type="button" class="bi bi-pencil" data-toggle="modal" data-target="#myModal"></i>&nbsp;&nbsp;
+                <i class="bi bi-trash"></i>
+              </td>
+              </tr>
+            <% } %>  
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" href="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        hello!!!!!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('#exampleModal').modal('show')
+</script>
+
+  <%- include ("includes/footer.ejs") %>    
