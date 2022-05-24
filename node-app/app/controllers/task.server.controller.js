@@ -44,7 +44,10 @@ exports.removeById=(req,res)=>{
 exports.list=async function render(req,res){
   TaskModel.find({})
     .then((tasks)=> {
-      res.status(200).send(tasks) //200 OK
+      //res.status(200).send(tasks) //200 OK
+
+      res.render('index', {data: tasks});
+
     })
     .catch(err=>console.log("error: " + err))
 }
