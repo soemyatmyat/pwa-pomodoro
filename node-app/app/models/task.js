@@ -7,7 +7,8 @@ const taskSchema=mongoose.Schema({
     required:[true, "Please check your data entry, no task name specified."]
   },
   status:{
-    type: Boolean
+    type: Boolean,
+    default:false
   },
   estimated_pomodoro:{
     type: Number,

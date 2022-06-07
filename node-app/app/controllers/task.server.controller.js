@@ -44,9 +44,8 @@ exports.removeById=(req,res)=>{
 exports.list=async function render(req,res){
   TaskModel.find({})
     .then((tasks)=> {
-      //res.status(200).send(tasks) //200 OK
-
-      res.render('index', {data: tasks});
+      res.status(200).send(tasks) //200 OK
+      //res.render('index', {data: tasks}); //uncomment this line for EJS view Engine
 
     })
     .catch(err=>console.log("error: " + err))
