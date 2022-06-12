@@ -2,13 +2,6 @@ import React from "react"
 
 
 function Header() {
-
-  /*
-    <header>
-      <h1><img src="../../img/icons/favicon.ico"></img> Pomodoro</h1>
-    </header>
-  */
-
   return (
     <div>
       <nav className="navbar navbar-light bg-light">
@@ -21,3 +14,9 @@ function Header() {
 }
 
 export default Header
+
+  /*
+    <header>
+      <h1><img src="../../img/icons/favicon.ico"></img> Pomodoro</h1>
+    </header>
+  */

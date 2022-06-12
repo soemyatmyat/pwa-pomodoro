@@ -2,6 +2,16 @@ import React from "react"
 
 function Footer() {
   const year = new Date().getFullYear()
+  return (
+    <footer className="footer">
+      <div className="container">
+        <span>This site is written with <a href="https://nodejs.org/en/">node.js</a>, <a href="https://getbootstrap.com/">bootstrap</a> and integrated with <a href="https://mailchimp.com/">MailChimp API</a>. Crafted by <a href="https://github.com/soemyatmyat">https://github.com/soemyatmyat</a>. ☕️</span>    
+      </div>
+    </footer>
+  )
+}
+
+export default Footer
 
   /*
     <div className="container-fluid">
@@ -14,14 +24,3 @@ function Footer() {
     </div>
   */
 
-
-  return (
-    <footer className="footer">
-    <div className="container">
-      <span>This site is written with <a href="https://nodejs.org/en/">node.js</a>, <a href="https://getbootstrap.com/">bootstrap</a> and integrated with <a href="https://mailchimp.com/">MailChimp API</a>. Crafted by <a href="https://github.com/soemyatmyat">https://github.com/soemyatmyat</a>. ☕️</span>    
-    </div>
-  </footer>
-  )
-}
-
-export default Footer

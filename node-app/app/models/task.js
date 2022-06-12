@@ -13,7 +13,8 @@ const taskSchema=mongoose.Schema({
   estimated_pomodoro:{
     type: Number,
     min:[1, "Default is 1."],
-    max:10
+    max:10,
+    default:1
   },
   completed_pomodoro:{
     type: Number,
